@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="title_mainscreen">Pokedex</string>
+    <string name="placeholde_filtro">Ingresa el nombre del pokemon</string>
+</resources>

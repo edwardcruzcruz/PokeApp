@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--DrawerLayout es un tipo de layout que nos permite incluir menu lateral en uss pantallas
+Para más infor revisar: https://danielme.com/2018/12/19/diseno-android-menu-lateral-con-navigation-drawer/
+
+Adiconal, es importante colocar el idy el fitsSysyemwindows para que se ajuste al sistema de pantalla windows-->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.PokedexActivity">
+
+    <!--Agregamos este tipo de layout que permite ingresar objetos o cuadricales de este de manera vertical-->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewListPokemon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false" />
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
